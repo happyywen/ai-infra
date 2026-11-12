@@ -29,6 +29,6 @@ int main() {
     // TODO 3: 正确释放动态数组
     delete[] data;
     // TODO 4: 避免继续使用已经释放的内存
-    data = nullptr;
+    std::cout<<data[0];
     return 0;
 }
