@@ -22,7 +22,7 @@ public:
     std::size_t size() const {
         return size_;
     }
-
+    
     float& operator[](std::size_t i) {
         return data_[i];
     }
