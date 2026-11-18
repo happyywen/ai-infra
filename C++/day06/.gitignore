@@ -1,0 +1,17 @@
+# 构建产物
+build/
+build-*/
+cmake-build-*/
+
+# 编译中间物（万一散落在源码目录）
+*.o
+*.a
+*.so
+*.dylib
+*.exe
+
+# 编辑器/IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
