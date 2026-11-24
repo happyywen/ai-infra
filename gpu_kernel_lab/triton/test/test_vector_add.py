@@ -1,5 +1,5 @@
 import torch
-import gpu_kernel_lab.triton.kernel.vector_add as vector_add
+import gpu_kernel_lab.triton.vector_add.vector_add as vector_add
 
 sizes = [1, 127, 1024, 1025, 100003, 1000003]
 
