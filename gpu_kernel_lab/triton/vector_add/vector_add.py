@@ -47,17 +47,17 @@ def vector_add(x: torch.Tensor, y: torch.Tensor):
 
     return out
 
-torch.manual_seed(0)
-size = 984520
-x = torch.rand(size, device=DEVICE)
-y = torch.rand(size, device=DEVICE)
-output_torch = x + y
-output_triton = vector_add(x, y)
-print(output_torch)
-print(output_triton)
-print(f'The maximum difference between torch and triton is '
-      f'{torch.max(torch.abs(output_torch - output_triton))}')
+# torch.manual_seed(0)
+# size = 984520
+# x = torch.rand(size, device=DEVICE)
+# y = torch.rand(size, device=DEVICE)
+# output_torch = x + y
+# output_triton = vector_add(x, y)
+# print(output_torch)
+# print(output_triton)
+# print(f'The maximum difference between torch and triton is '
+#       f'{torch.max(torch.abs(output_torch - output_triton))}')
 
-# bench
-ms = triton.testing.do_bench(lambda: vector_add(x, y), return_mode="mean")
-print(f"Triton latency: {ms:.4f} ms")
+# # bench
+# ms = triton.testing.do_bench(lambda: vector_add(x, y), return_mode="mean")
+# print(f"Triton latency: {ms:.4f} ms")
